@@ -3,6 +3,7 @@ import { Route, Routes } from 'react-router';
 
 import HomePage from './Pages/homePage';
 import AboutPage from './Pages/aboutPage';
+import NotFoundPage from './Pages/not-foundPage';
 
 import Header from './components/Header';
 
@@ -57,6 +58,8 @@ const App = () => {
 					}
 				/>
 				<Route path="/aboutPage" element={<AboutPage />} />
+
+				<Route path="*" element={<NotFoundPage />} />
 			</Routes>
 		</>
 	);
