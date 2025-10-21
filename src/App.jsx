@@ -4,6 +4,7 @@ import { Route, Routes } from 'react-router';
 import HomePage from './Pages/homePage';
 import AboutPage from './Pages/aboutPage';
 import NotFoundPage from './Pages/not-foundPage';
+import CoinDetailsPage from './Pages/coin-DetailsPage';
 
 import Header from './components/Header';
 
@@ -58,6 +59,7 @@ const App = () => {
 					}
 				/>
 				<Route path="/aboutPage" element={<AboutPage />} />
+				<Route path="/coin/:id" element={<CoinDetailsPage />} />
 
 				<Route path="*" element={<NotFoundPage />} />
 			</Routes>
