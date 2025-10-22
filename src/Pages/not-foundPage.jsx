@@ -52,8 +52,8 @@ const styles = {
 
 	overlay: {
 		position: 'absolute',
-		top: '5%',
-		left: '5%',
+		top: '60%',
+		left: '38%',
 		textAlign: 'center',
 		zIndex: 1,
 	},
@@ -61,21 +61,21 @@ const styles = {
 	// 🔹 Semi-transparent dark box behind text
 	overlayBox: {
 		background: 'rgba(0, 0, 0, 0.4)',
-		padding: '30px',
+		padding: '15px',
 		borderRadius: '12px',
 		backdropFilter: 'blur(4px)',
 		display: 'inline-block',
 	},
 
 	title: {
-		fontSize: '72px',
-		marginBottom: '10px',
+		fontSize: '60px',
+		marginBottom: '5px',
 		fontWeight: 'bold',
 	},
 
 	message: {
-		fontSize: '18px',
-		marginBottom: '20px',
+		fontSize: '14px',
+		marginBottom: '15px',
 		color: '#ccc',
 	},
 

@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import { Link, useParams } from 'react-router';
 
 import Spinner from '../components/Spinner';
+import CoinChart from '../components/CoinChart';
 
 const API_URL = import.meta.env.VITE_COIN_API_URL;
 
@@ -20,7 +21,6 @@ const CoinDetailsPage = () => {
 				if (!res.ok) throw new Error('Failed to fetch Data');
 
 				const data = await res.json();
-				console.log(data);
 				setCoin(data);
 			} catch (err) {
 				setError(err.message);
@@ -85,6 +85,8 @@ const CoinDetailsPage = () => {
 							Last Updated: {new Date(coin.last_updated).toLocaleDateString()}
 						</h4>
 					</div>
+
+					<CoinChart coinId={coin.id} />
 
 					<div className="coin-details-links">
 						{coin.links?.homepage?.[0] && (
